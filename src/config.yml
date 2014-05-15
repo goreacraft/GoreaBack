@@ -1,0 +1,20 @@
+Death Message: You can use the command '/gback' to get back to your last death location. 
+Price: 50
+Currency: $
+Gback cooldown: 30
+Gback warmup: 5
+Gback Warmup finesse on move: 0.5
+Gback to another player coldown: 600
+
+Detect lava: true
+Detect void: true
+Warn lava cooldown: 10
+
+Load deaths on start: true
+Min Time To Store Deaths: 172800
+Check on start for old deaths: true
+Remove old deaths on plugin reload: false
+Debug death times: false
+More info in logs: false
+
+Save to file on every death event: true

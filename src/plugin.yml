@@ -1,0 +1,63 @@
+name: GoreaBack
+main: com.goreacraft.plugins.goreaback.Main
+version: 1.3
+description: All i could think a /back command should have.
+author: goreacraft
+website: http://www.goreacraft.com
+prefix: GoreaBack
+  
+commands:
+    goreaback:
+      aliases: [gb, gback, death]
+      description: Teleports you back to your/others last death location! Type '/gback help' for more info.
+      usage: /gb ?, /gb, /gb <player_destination>, /gb <player_target> <player_destination>, /gb list, /gb reload
+      default: false
+   
+
+permissions:
+   gorea.*:
+     description: Gives access to all GoreaBack commands
+     children:
+       gorea.help: true
+       gorea.back: true
+       gorea.backonothers: true
+       gorea.backothers: true
+       gorea.reload: true
+       gorea.list: true
+       
+   gorea.back:
+     description: Teleports you to your last death location.
+     default: false
+   gorea.reload:
+     description: Reloads Config.yml and Deaths.yml, also removes old locations.
+     default: false
+   gorea.list:
+     description: Lists all current death locations.
+     default: false
+   gorea.backonothers:
+     description: Teleports you to another player last death location.
+     default: false
+     children: 
+       gorea.back: true
+   gorea.backothers:
+     description: You can teleport a player to another player last death location.
+     default: false
+     children: 
+       gorea.back: true
+       gorea.backonothers: true
+   gorea.help:
+     description: Shows help
+     deafult: true
+   gorea.bypass.cooldown:
+     description: No coldown when doing /gb.
+     default: false
+   gorea.bypass.warmup:
+     description: No warmup when doing /gb.
+     default: false
+   gorea.bypass.pay:
+     description: No pay when doing /gb.
+     default: false
+       
+       
+     
+       

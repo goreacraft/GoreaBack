@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="J:/###Dropbox-goreacraft/Dropbox/Development/Bukkit Plugins/GoreaBack-Master/GoreaBack_V1.2-CuSursa.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/GoreaBack 147/CuSursaToDropBox.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=GoreaBack 147/src"/>
+        <file path="/GoreaBack 147/.project"/>
+        <file path="/GoreaBack 147/FaraSursa.jardesc"/>
+        <file path="/GoreaBack 147/FaraSursaToDropBox.jardesc"/>
+        <file path="/GoreaBack 147/.classpath"/>
+        <file path="/GoreaBack 147/CuSursaToDropBox.jardesc"/>
+        <file path="/GoreaBack 147/FaraSursaToServer.jardesc"/>
+    </selectedElements>
+</jardesc>
