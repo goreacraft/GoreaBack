@@ -120,15 +120,9 @@ public class Main extends JavaPlugin implements Listener
     		} catch (IOException e) {
     		    // Failed to submit the stats :-(
     		}
-    	 
-    	
+
 		new Updater(77997);
-    	// System.out.println(updateCheck);
-    	 //Updater updater = new Updater(this, 77997, this.getFile(), UpdateType.NO_DOWNLOAD, true);
-    	// if (updateCheck.getResult() == UpdateResult.UPDATE_AVAILABLE) {
-    	//     this.getLogger().info("New version available! " + updater.getLatestName());
-    	// }
-    
+
     }
    
     
