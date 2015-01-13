@@ -150,18 +150,18 @@ public class Main extends JavaPlugin implements Listener
     {
     	Player player = event.getEntity().getPlayer();    	
     	String world = event.getEntity().getWorld().getName();
-    	long pX = (long) event.getEntity().getLocation().getX();
-    	long pY = (long) event.getEntity().getLocation().getY();
-    	long pZ = (long) event.getEntity().getLocation().getZ();
+    	double pX = event.getEntity().getLocation().getX();
+    	double pY = event.getEntity().getLocation().getY();
+    	double pZ = event.getEntity().getLocation().getZ();
     	timeseconds = Calendar.getInstance().getTimeInMillis() / 1000 ;
 
     	
     	List<String> loc = new ArrayList<String>();
     	loc.add(world.toString());
     	
-    	loc.add(Long.toString(pX));
-    	loc.add(Long.toString(pY));
-    	loc.add(Long.toString(pZ));
+    	loc.add(Double.toString(pX));
+    	loc.add(Double.toString(pY));
+    	loc.add(Double.toString(pZ));
     	loc.add(Long.toString(timeseconds));
     	
     	playerDeathData.createSection(player.getName());
@@ -253,9 +253,9 @@ public class Main extends JavaPlugin implements Listener
 		            			int x;
 		            			int y;
 		            			int z;
-		            			x = Integer.parseInt(map.get(name).get(1));
-		            			y = Integer.parseInt(map.get(name).get(2));
-		            			z = Integer.parseInt(map.get(name).get(3));
+		            			x = (int)Double.parseDouble(map.get(name).get(1));
+		            			y = (int)Double.parseDouble(map.get(name).get(2));
+		            			z = (int)Double.parseDouble(map.get(name).get(3));
 		            		//	player.sendMessage("Detect lava: " + getConfig().getBoolean("Detect lava") );
 		            			
 		            			//player.sendMessage("location: " + map.get(name));
@@ -292,7 +292,7 @@ public class Main extends JavaPlugin implements Listener
 		            		//}
 		            		if  (getConfig().getBoolean("Detect void"))
 		            		{
-		            			if(Integer.parseInt(map.get(name).get(2))<0)
+		            			if(Double.parseDouble(map.get(name).get(2))<0)
 		            			{
 		            			
 		            			player.sendMessage(ChatColor.DARK_AQUA + "[GoreaBack]" + ChatColor.RESET + ": " + ChatColor.RED + "Void detected on destination");
@@ -616,9 +616,9 @@ public class Main extends JavaPlugin implements Listener
 		 	    		List<String> loc = new ArrayList<String>();
 		 	    		loc.add(Iterables.getFirst(playerDeathData.getStringList(name), "world"));
 		 	    		loc.add(getServer().getWorlds().get(0).toString());
-		 	    		loc.add(Long.toString(coord.get(0)));
-		 	    		loc.add(Long.toString(coord.get(1)));
-		 	    		loc.add(Long.toString(coord.get(2)));
+		 	    		loc.add(Double.toString(coord.get(0)));
+		 	    		loc.add(Double.toString(coord.get(1)));
+		 	    		loc.add(Double.toString(coord.get(2)));
 		 	    		loc.add(Long.toString(timeseconds));
 		 	    			 playerDeathData.set(name, loc);
 		 	    			 
@@ -695,7 +695,7 @@ public class Main extends JavaPlugin implements Listener
 
 		World world = getServer().getWorld((String) list.get(0));
 
-		Location loc = new Location ( world, Integer.parseInt(list.get(1)), Integer.parseInt(list.get(2)), Integer.parseInt(list.get(3)));
+		Location loc = new Location ( world, Double.parseDouble(list.get(1)), Double.parseDouble(list.get(2)), Double.parseDouble(list.get(3)));
 		return loc;
 	}
 	
